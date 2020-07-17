@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+    <h1><i class="fa fa-free-code-camp" aria-hidden="true"></i> Recipe Box</h1>
+    <div id='app'>
+        <div id="appy">
+            <ul class='ull' >
+                <todo-item
+                v-for="item in list"
+                v-bind:todo="item"
+                ></todo-item>
+            </ul>
+        </div>
+        <div id='text'>
+            <div class='title'>{{title}} <i class="fa fa-trash" v-on:click='deleter' title='delete'></i><i v-on:click='edit' class="fa fa-pencil-square-o" aria-hidden="true" title='edit'></i></div>
+            <div class='formula'>
+                <h2>Ingredients:</h2>
+                <ul>
+                    <ingredient v-for="it in ingre" v-bind:ing="it"></ingredient>
+                </ul>
+                <h2>Directions:</h2>
+                <ol>
+                    <direct v-for='jj in direction' v-bind:dir='jj'></direct>
+                </ol>
+            </div>
+            <div class='end'><i v-on:click='newer' title='add' class="fa fa-plus-square"></i></div>
+        </div>
+        <div  class='form' v-bind:style='{display:changeDisp}'>
+        <h2 >Edit Recipe</h2>
+        <div>
+        Recipe<br>
+        <input class='input' name='inputs' v-model='text' ></input></div>
+        <div>
+        Ingredients<br>
+        <textarea class='textarea1' placeholder="Enter an ingredient and go to new line or press enter to write the next ingredient." name='textarea1' v-model='ing'></textarea></div>
+        <div>Directions<br>
+        <textarea class='textarea2' placeholder='Enter an instruction and click enter to go to new line for another instruction.' name='textarea2' v-model='dire'></textarea></div>
+        <div id='over'>
+        <button v-on:click='done' class='submit'>Submit</button>
+        <button type='reset' class='cancel' v-on:click='cancel'>Cancel</button>
+        </div>
+        </div>
+    </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
