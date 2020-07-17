@@ -1,0 +1,109 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display:grid;
+    place-items:center;
+    background-color:#ff5722;
+}
+h1{
+    color:white;
+}
+.ul{
+    list-style: none;
+    padding:0.375rem;
+    margin-left:-1.5rem;
+    
+}
+#app{
+    width:100vw;
+    display:grid;
+    justify-items: center;
+}
+#appy{
+   width:100vw;
+   display:flex;
+   justify-content: center; 
+}
+.ull{
+   height:6.5rem;
+    width:70vw;
+    padding-top:0.25rem;
+    overflow-y:scroll;
+    border-radius:0.25rem;
+    background-color: #084C61;
+}
+#text{
+    width:75vw;
+}
+.title,.end{
+    height:2.5rem;
+    background-color:#084C61;
+    color:white;
+    padding:0.5rem;
+    font-size:1.65rem;
+}
+.title{
+    border-top-left-radius:0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.end{
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.formula{
+    background-color:#481D24;
+    color:white;
+    padding-left:0.75rem;
+    height:20rem;
+    overflow-y:scroll;
+}
+.fa{
+    padding:0.25rem;
+}
+.form{
+    width:40vw;
+    color:black;
+    height:25rem;
+    z-index:2;
+    margin-top:-27.5rem;
+    background-color: white;
+    text-align:center;
+    border-radius:0.35rem;
+}
+
+#over{
+    display:flex;
+    justify-content: center;
+}
+.form div{
+    margin-bottom:1rem;
+    display:grid;
+    justify-items: center;
+}
+
+input{
+    background-color:lightblue;
+}
+textarea{
+    background-color:lightblue;
+    width:80%;
+    height:5rem;
+    overflow-y:scroll;
+}
+.form button{
+    color:white;
+    margin:0.25rem;
+    border:none;
+}
+.submit{
+    background-color: green;
+}
+.cancel{
+    background-color:red;
+}
+.form button:active{
+    outline:none;
+}
+li{
+    font-size:1.25rem;
+}
